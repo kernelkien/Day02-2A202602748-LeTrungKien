@@ -31,14 +31,14 @@
 > Gợi ý tự soi: tuần trước mất nhiều thời gian nhất vào việc gì? Việc gì hay trì hoãn? Người khác hay hỏi lại câu gì? Workflow nào ai cũng biết là chậm?
 
 **AI đã dùng ở Phase 1 (nếu có):**
-- Prompt đã hỏi:
-- Ý dùng được:
-- Ý bỏ vì không phải pain thật:
+- Prompt đã hỏi: Gợi ý cho tôi 10 vấn đề thực tế trong học tập và công việc hàng ngày có thể tối ưu bằng AI hoặc quy trình mới, thuộc 4 lăng kính: lặp lại, tốn thời gian, AI có thể tốt hơn, pain từ người khác.
+- Ý dùng được: Trích xuất requirements từ transcript họp, lọc feedback học viên, soát lỗi chính tả báo cáo dài, chuyển đổi 3 phiên bản content truyền thông, hỗ trợ giải đáp quy trình nội bộ.
+- Ý bỏ vì không phải pain thật: Loại bỏ gợi ý "tự động viết code toàn bộ dự án" và "tự động nhắc nhở tập thể dục" do quá rộng, thiếu bottleneck và không có số đo quy trình thực tế.
 
 **Self-check Phase 1:**
-- [ ] Đủ 5+ dòng, mỗi dòng có actor + số đo cụ thể
-- [ ] Dùng ít nhất 3/4 lăng kính
-- [ ] Không có dòng chung chung kiểu "mất nhiều thời gian"
+- [x] Đủ 5+ dòng, mỗi dòng có actor + số đo cụ thể
+- [x] Dùng ít nhất 3/4 lăng kính
+- [x] Không có dòng chung chung kiểu "mất nhiều thời gian"
 
 ---
 
@@ -50,9 +50,9 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 
 | Rank | Problem (copy từ bảng scan) | Vì sao chọn (2-3 ý) | Điều còn chưa chắc |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Đọc transcript cuộc họp với khách hàng/nhóm để lọc Yêu cầu (Requirements) & Action Items đưa lên Trello/Jira | - Workflow rõ ràng 5 bước, điểm nghẽn nằm ở khâu đọc ghi âm và gõ tay<br>- Tần suất họp cao (3 lần/tuần), tiết kiệm ngay 60 phút/buổi họp<br>- Đầu ra dạng Ticket/Action Items đo lường được trực quan | Độ chính xác của AI khi nhận diện ngữ cảnh tiếng Việt và các thuật ngữ chuyên ngành (domain jargon) trong cuộc họp |
+| 2 | Tìm kiếm, tóm tắt tài liệu nghiên cứu và trích dẫn chuẩn APA cho bài luận/báo cáo đồ án nhóm | - Giải quyết pain point lớn của sinh viên/researcher (tốn 120 phút cho bài 15 trang)<br>- Các bước tìm kiếm - đọc lướt - tóm tắt - tạo APA rất rõ ràng<br>- AI phát huy thế mạnh vượt trội ở khâu xử lý và tóm tắt văn bản dài | AI có thể bị ảo giác (hallucination) tạo trích dẫn giả hoặc tóm tắt sai ý chính của bài báo khoa học |
+| 3 | Lọc comment & phân tích cảm xúc (Sentiment) để trích xuất danh sách câu hỏi thắc mắc thường gặp (FAQ) bài đăng tuyển dụng | - Tiết kiệm 75 phút đọc 200+ comment cho mỗi chiến dịch tuyển dụng/marketing<br>- Giúp phát hiện sớm các thắc mắc gấp để phản hồi ứng viên kịp thời<br>- Dễ áp dụng prompt AI để gom nhóm câu hỏi tự động | Ngôn ngữ comment nhiều teencode, viết tắt, câu thiếu ngữ cảnh khiến AI phân loại nhầm sentiment |
 
 ### 2.2. Problem Cards chi tiết (lặp lại cho cả 3 cards)
 
