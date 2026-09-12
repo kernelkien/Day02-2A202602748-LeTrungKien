@@ -58,36 +58,44 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 
 ---
 
-#### Problem Card #1 — [Tên problem]
+#### Problem Card #1 — Trích xuất Requirements & Action Items từ transcript cuộc họp
 
 ```text
 Problem 1 câu:
+Sau mỗi cuộc họp kéo dài 45-60 phút, BA/PM phải dành ra 60 phút nghe lại file thu âm hoặc đọc transcript để bóc tách Yêu cầu (Requirements) và công việc (Action Items) gõ tay lên Jira/Trello.
 
 Actor:
+Business Analyst / Product Manager / Leader nhóm dự án.
 
 Thời điểm / bối cảnh:
+Sau mỗi cuộc họp lấy yêu cầu với khách hàng hoặc họp sprint alignment với team (khoảng 3 lần/tuần).
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Xuất file ghi âm / transcript tự động từ Google Meet / Zoom (5 phút)
+2. Đọc lại toàn bộ transcript và nghe lại những đoạn trao đổi chưa rõ (30 phút)
+3. Tổng hợp danh sách Yêu cầu (Requirements) và Action Items ra file Note (15 phút)
+4. Phân công người phụ trách (Assignee) và gán deadline cho từng công việc (10 phút)
+5. Tạo từng ticket tay trên Jira / Trello (10 phút)
 
 Bottleneck:
+Bước 2 & 3: Đọc lại toàn bộ bản transcript dài 10-15 trang để chắt lọc ý chính tốn rất nhiều thời gian và dễ bỏ sót thông tin quan trọng.
 
 Impact:
+Tốn tổng cộng 70 phút/buổi họp x 3 buổi/tuần = 3.5 giờ/tuần; trễ thời gian cập nhật Jira làm chậm tiến độ bắt đầu sprint của dev team.
 
 Success metric:
+Giảm thời gian xử lý sau họp từ 70 phút xuống còn 15 phút/buổi họp; 100% action items có assignee và deadline rõ ràng.
 
 Non-AI alternative:
+Chỉ định 1 thành viên ghi chú trực tiếp (Note-taker) trong lúc họp. Tuy nhiên người ghi chú dễ bị xao nhãng, không tham gia thảo luận sâu được và vẫn dễ bỏ sót ý.
 
 AI hypothesis:
+Truyền transcript vào AI Prompt để AI tự động trích xuất danh sách Yêu cầu + Action Items theo khung format chuẩn (Task - Assignee - Deadline).
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -95,51 +103,59 @@ Quick gut:
 **Draft workflow Card #1** (ASCII / Mermaid / ảnh đính kèm):
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — 70 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ...: __'] → [4 ...: __']  <-- bottleneck
+[1. Xuất transcript: 5'] → [2. Đọc transcript & nghe lại: 30'] → [3. Tổng hợp tay Requirements: 15'] → [4. Gán Assignee/Deadline: 10'] → [5. Tạo ticket Jira: 10']  <-- bottleneck ở bước 2 & 3
 
-FUTURE STATE — ___ phút
+FUTURE STATE — 15 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ... review: __']  <-- human boundary
+[1. Upload transcript vào AI Prompt: 2'] → [2. AI tự động bóc tách Requirements & Action Items: 3'] → [3. Human Review & duyệt danh sách: 5'] → [4. Push tự động lên Jira qua API/Zapier: 5']  <-- human boundary ở bước 3
 
-Fallback: nếu AI sai thì ...
+Fallback: Nếu AI trích xuất thiếu hoặc hiểu sai ngữ cảnh, BA/PM mở lại file ghi âm tại mốc thời gian (timestamp) tương ứng để kiểm tra và bổ sung bằng tay.
 ```
 
 File đính kèm (nếu vẽ riêng): `01-individual-problem-scan-workflow-card-1.png`
 
 ---
 
-#### Problem Card #2 — [Tên problem]
+#### Problem Card #2 — Tìm kiếm, tóm tắt tài liệu nghiên cứu và trích dẫn chuẩn APA
 
 ```text
 Problem 1 câu:
+Khi viết bài luận hoặc báo cáo đồ án nhóm 15-20 trang, sinh viên/researcher mất 120 phút đọc lướt hàng chục bài báo khoa học để tìm ý chính và tự gõ trích dẫn chuẩn APA.
 
 Actor:
+Sinh viên đại học / Nghiên cứu sinh / Thành viên nhóm làm đồ án.
 
 Thời điểm / bối cảnh:
+Giai đoạn làm Tổng quan tài liệu (Literature Review) hoặc viết Cơ sở lý luận cho bài báo cáo/đồ án môn học.
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Tìm kiếm từ khóa bài báo trên Google Scholar / ScienceDirect (20 phút)
+2. Tải 8-10 file PDF tài liệu về máy (10 phút)
+3. Đọc lướt từng file PDF để tìm đoạn văn phù hợp với đề tài (50 phút)
+4. Tóm tắt nội dung chính và viết lại theo ý mình (25 phút)
+5. Tạo định dạng trích dẫn chuẩn APA thủ công cho từng tài liệu (15 phút)
 
 Bottleneck:
+Bước 3 & 4: Đọc thủ công hàng trăm trang tài liệu tiếng Anh chuyên ngành để lọc ra 2-3 ý chính tốn cực kỳ nhiều thời gian.
 
 Impact:
+Mất 120 phút/bài luận; dễ dẫn đến việc trích dẫn sai định dạng APA hoặc dùng tài liệu không liên quan đến đề tài.
 
 Success metric:
+Giảm thời gian tìm kiếm & tóm tắt tài liệu từ 120 phút xuống còn 30 phút/bài; 100% trích dẫn đúng định dạng APA.
 
 Non-AI alternative:
+Sử dụng công cụ quản lý trích dẫn truyền thống như EndNote / Mendeley để tự động tạo trích dẫn APA, nhưng vẫn phải tự đọc và tóm tắt tay toàn bộ tài liệu.
 
 AI hypothesis:
+Sử dụng AI đọc hiểu PDF (RAG / Claude / ChatPDF) để tóm tắt các luận điểm chính theo từng từ khóa và tự xuất ra định dạng trích dẫn APA kèm link gốc.
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -147,51 +163,59 @@ Quick gut:
 **Draft workflow Card #2:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — 120 phút
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[1. Search tài liệu: 20'] → [2. Tải PDF: 10'] → [3. Đọc lướt tìm ý: 50'] → [4. Tóm tắt tay: 25'] → [5. Gõ trích dẫn APA: 15']  <-- bottleneck ở bước 3 & 4
 
-FUTURE STATE — ___ phút
+FUTURE STATE — 30 phút
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[1. Upload tài liệu PDF vào AI Reader: 3'] → [2. Prompt AI trích xuất luận điểm chính & định dạng APA: 5'] → [3. Human Review & đối chiếu nguồn gốc: 15'] → [4. Chèn vào bài báo cáo: 7']  <-- human boundary ở bước 3
 
-Fallback: ...
+Fallback: Nếu AI tóm tắt quá chung chung hoặc sai ý bài báo, mở trực tiếp mục Abstract và Conclusion của file PDF gốc để tự đối chiếu lại.
 ```
 
 File đính kèm: `01-individual-problem-scan-workflow-card-2.png`
 
 ---
 
-#### Problem Card #3 — [Tên problem]
+#### Problem Card #3 — Lọc comment & phân tích cảm xúc (Sentiment) trích xuất FAQ tuyển dụng
 
 ```text
 Problem 1 câu:
+Mỗi đợt đăng bài tuyển dụng/truyền thông thu hút 200+ bình luận, HR/Marketer mất 75 phút đọc rà từng comment để phân loại cảm xúc và trích ra các thắc mắc lặp lại để trả lời.
 
 Actor:
+HR Intern / Recruitment Marketer / Fanpage Admin.
 
 Thời điểm / bối cảnh:
+Trong vòng 24-48 giờ sau khi tung bài đăng tuyển dụng hoặc sự kiện truyền thông mới trên Fanpage/LinkedIn.
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Mở bài đăng và tải/cuộn danh sách bình luận (5 phút)
+2. Đọc từng bình luận để phát hiện thắc mắc hoặc phản hồi tiêu cực (40 phút)
+3. Phân loại comment thành: Tích cực / Thắc mắc / Tiêu cực (15 phút)
+4. Gom các thắc mắc trùng nhau thành danh sách FAQ (10 phút)
+5. Soạn câu trả lời mẫu và trả lời từng comment (5 phút)
 
 Bottleneck:
+Bước 2 & 3: Đọc thủ công hàng trăm bình luận chứa teencode, icon và viết tắt rất mất thời gian và dễ bỏ sót các thắc mắc gấp của ứng viên.
 
 Impact:
+Mất 75 phút/bài đăng; ứng viên bị phản hồi trễ (sau 12-24h) dẫn đến giảm tỷ lệ ứng tuyển và trải nghiệm thương hiệu tuyển dụng kém.
 
 Success metric:
+Giảm thời gian đọc & phân loại comment từ 75 phút xuống còn 15 phút; thời gian phản hồi ứng viên giảm từ 12 giờ xuống dưới 2 giờ.
 
 Non-AI alternative:
+Sử dụng bộ lọc từ khóa có sẵn của Facebook (Block keywords), nhưng cách này chỉ ẩn được từ xấu chứ không phân loại được thắc mắc hay gom nhóm FAQ.
 
 AI hypothesis:
+Đưa dữ liệu comment vào AI Phân tích Sentiment để tự động gán nhãn (Positive/Neutral/Negative/Question) và gom nhóm các câu hỏi phổ biến thành file FAQ.
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -199,15 +223,15 @@ Quick gut:
 **Draft workflow Card #3:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — 75 phút
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[1. Load comment: 5'] → [2. Đọc từng comment: 40'] → [3. Phân loại thủ công: 15'] → [4. Gom nhóm FAQ: 10'] → [5. Trao đổi & trả lời: 5']  <-- bottleneck ở bước 2 & 3
 
-FUTURE STATE — ___ phút
+FUTURE STATE — 15 phút
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[1. Export comment ra file CSV/Sheet: 3'] → [2. AI tự động gán nhãn Sentiment & gom FAQ: 4'] → [3. Admin Review & duyệt câu trả lời FAQ: 5'] → [4. Trả lời ứng viên trên Fanpage: 3']  <-- human boundary ở bước 3
 
-Fallback: ...
+Fallback: Nếu AI phân loại sai comment teencode/mỉa mai, Admin chuyển thủ công comment đó sang nhóm cần kiểm tra lại (Manual Review List).
 ```
 
 File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
