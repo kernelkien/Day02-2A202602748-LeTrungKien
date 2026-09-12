@@ -243,26 +243,26 @@ File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
 **Card tôi muốn pitch nhất:**
 
 ```text
-
+Problem Card #1 — Trích xuất Requirements & Action Items từ transcript cuộc họp
 ```
 
 **Vì sao (2-3 câu: workflow gì, số đo gì, impact gì):**
 
 ```text
-
+Workflow 5 bước rõ ràng với điểm nghẽn chính nằm ở khâu đọc lại 10-15 trang transcript và chắt lọc tay. Giải pháp giúp giảm thời gian xử lý sau họp từ 70 phút xuống còn 15 phút/buổi (tiết kiệm 3.5 giờ/tuần). Impact lớn là giúp team nắm bắt ngay Yêu cầu và tiến hành làm việc mà không trễ deadline khởi động sprint.
 ```
 
 **Câu hỏi tôi muốn nhóm challenge (1-2 câu hỏi đúng chỗ yếu):**
 
 ```text
-
+Nếu cuộc họp nói chêm tiếng Anh lẫn tiếng Việt và có nhiều thuật ngữ chuyên ngành (domain jargon), làm sao để prompt AI không trích xuất sai Yêu cầu (Requirement) quan trọng?
 ```
 
 **AI phản biện Card (nếu có):**
-- Điểm yếu AI chỉ ra:
-- Tôi sửa gì:
+- Điểm yếu AI chỉ ra: AI cảnh báo rằng trong cuộc họp tự do, mọi người hay nói đùa hoặc đưa ra ý tưởng bộc phát, nếu AI bóc tách tự động sẽ dễ bị coi các ý kiến thảo luận dở dang thành công việc bắt buộc (Action Item).
+- Tôi sửa gì: Bổ sung ranh giới kiểm soát của con người (Human boundary) ở Bước 3 — BA/PM bắt buộc phải review và tick chọn danh sách Action Items trước khi cho phép đẩy tự động lên Jira.
 
 ### Self-check nộp phần 01
-- [ ] Có 5+ problems + top 3 Cards đủ field
-- [ ] Mỗi Card có workflow trước/sau + bottleneck + metric + fallback
-- [ ] Đã chọn 1 card pitch + câu hỏi challenge
+- [x] Có 5+ problems + top 3 Cards đủ field
+- [x] Mỗi Card có workflow trước/sau + bottleneck + metric + fallback
+- [x] Đã chọn 1 card pitch + câu hỏi challenge
