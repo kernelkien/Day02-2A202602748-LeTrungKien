@@ -242,7 +242,7 @@ hoặc bỏ qua những nội dung có giá trị.
 
 Phải nhìn ra 5 thứ: bước nào máy (Rule), bước nào AI, bước nào người, boundary ở đâu, fallback khi AI sai.
 
-![alt text](image-1.png)
+[![alt text](image-1.png)](image-1.png)
 
 
 ```text
