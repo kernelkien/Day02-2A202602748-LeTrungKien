@@ -202,7 +202,7 @@ Core flow: SAVE → UNDERSTAND → GOAL MATCH → PRIORITIZE → RESURFACE → R
 
 
 Dán workflow hoặc link file: 
-
+![alt text](image.png)
 
 ```text
 [1 Tìm thấy nội dung: 1-5' - người]
