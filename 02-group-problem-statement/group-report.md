@@ -201,7 +201,6 @@ Core flow: SAVE → UNDERSTAND → GOAL MATCH → PRIORITIZE → RESURFACE → R
 ### 5.1. Current workflow bản nhóm
 
 
-Dán workflow hoặc link file: 
 ![alt text](image.png)
 
 ```text
@@ -243,9 +242,7 @@ hoặc bỏ qua những nội dung có giá trị.
 
 Phải nhìn ra 5 thứ: bước nào máy (Rule), bước nào AI, bước nào người, boundary ở đâu, fallback khi AI sai.
 
-
-
-Phải nhìn ra 5 thứ: bước nào máy (Rule), bước nào AI, bước nào người, boundary ở đâu, fallback khi AI sai.
+![alt text](image-1.png)
 
 
 ```text
